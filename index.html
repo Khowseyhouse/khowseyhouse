@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Khowsey House - Taste the Delicious Khowsey</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  </head>
+  <body>
+    <header>
+      <div class="logo-container">
+        <img src="khowseyLogo.jpg" alt="Khowsey House Logo" class="logo-img" />
+        <span class="logo-text">Khowsey House</span>
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <div class="menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+    </header>
+
+    <section id="home" class="home-section">
+      <div class="overlay"></div>
+      <div class="home-content">
+        <h1>Welcome to Khowsey House</h1>
+        <p class="slogan">Taste the Delicious Khowsey</p>
+        <p class="details">
+          We specialize in the authentic Memon dish, Khowsey. Experience the
+          rich and flavorful taste of traditional Memon cuisine. Only at Khousey
+          House!
+        </p>
+      </div>
+    </section>
+
+    <section id="menu" class="menu-section">
+      <h2>Our Specialty: Khowsey</h2>
+      <div class="menu-item">
+        <img src="khowseyimage.jpg" alt="Khowsey Dish" />
+        <h3>Khowsey</h3>
+        <p>Authentic and delicious Memon-style Khowsey. A must-try!</p>
+        <button id="buy-now" onclick="openWhatsApp()">Order Now</button>
+      </div>
+    </section>
+
+    <section id="contact">
+      <footer>
+        <div class="social-media">
+          <a href="https://www.facebook.com/rahilakapadiaa/" target="_blank"
+            >Facebook</a
+          >
+          <a href="https://www.instagram.com/khowsey_house_/" target="_blank"
+            >Instagram</a
+          >
+        </div>
+        <div class="contact-info">
+          <p>
+            Call us:
+            <a href="#+923303640368" onclick="openWhatsApp()"
+              >+92 330 3640368</a
+            >
+          </p>
+        </div>
+      </footer>
+    </section>
+
+    <script>
+      function openWhatsApp() {
+        window.location.href =
+          "https://wa.me/923303640368?text=I'd%20like%20to%20order%20Khowsey!";
+      }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const menuToggle = document.querySelector(".menu-toggle");
+        const navMenu = document.querySelector("nav ul");
+
+        menuToggle.addEventListener("click", function () {
+          navMenu.classList.toggle("active");
+        });
+      });
+    </script>
+  </body>
+</html>
